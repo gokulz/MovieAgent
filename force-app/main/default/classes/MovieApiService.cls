@@ -2,7 +2,7 @@ public class MovieApiService {
     
     public static String getImdbdata(String title, String year){
         //store the endpoint
-        String endPoint = 'https://www.omdbapi.com/?apikey=954f944a&t=' + title + '&y=' + year;
+        String endPoint = 'https://www.omdbapi.com/?apikey=YOURKEY&t=' + title + '&y=' + year;
         String storeAllData = '';
         try{
         //create the http instance
