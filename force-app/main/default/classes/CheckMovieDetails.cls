@@ -2,10 +2,10 @@ public class CheckMovieDetails {
    @InvocableMethod(
         label='Get Movie Details' description='Retrieves movie details from the OMDb API based on the provided title and year'
     )
-    public static List<String> movieDetails(List<MovieRequest> apiService){
+    public static List<String> movieDetails(List<MovieRequest> mvRequest){
         List<String> resultService = new List<String>();
         
-        for(MovieRequest req : apiService){
+        for(MovieRequest req : mvRequest){
             String movieData = MovieApiService.getImdbdata(req.title, req.year);
             resultService.add(movieData);
         }
